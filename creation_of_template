@@ -1,0 +1,40 @@
+"""
+create templates folder in blog,create other folder called blog in templates and create a file in it called home.html,about.html
+go to app.py and copy name, go to settings.py and make changes in installed apps ['blog.apps.name']
+and also change dir=[os.path.join(base_dir,'templates')]
+in view.py return render(request,'blog.home.html')
+"""
+
+"""
+to create a global var and use it make 
+posts=[
+    {
+        'author':'Snehitha',
+     'birth':2004
+    },
+    {
+        'author':'Sony',
+        'birth':2008
+    }
+]
+def home(request):
+    c={'pos':posts}
+    return render(request, 'blogSneha/home.html',c)  render can take only 3 values
+in home.html      
+      {%for po in pos%}
+          <h1>{{ po.birth}}</h1>
+          <p>{{ po.title}} is great</p>
+      {% endfor %}
+"""
+
+"""
+  to create seperate base.html so that it can be used in any html directly
+  <body>
+    {% block content %}
+    {% end block content %}
+  </body>
+    in other htmls
+    { %extends "blogSneha/base.html" % }
+    {% block content%}....{% end block content%}
+"""
+  
