@@ -1,0 +1,23 @@
+"""
+pip instal django
+python -m django --version
+django-admin
+django-admin startproject dj
+python manager.py runserver
+"""
+
+""" 
+python manager.py startapp blog
+in views.py           from django.http imprort HTTPResponse
+                      define methods return HTTPResponse('<h1>'hii</h1>)
+create file urls.py in blogs
+                      from django.urls import path
+                      from . import views
+                      urlpatterns = [
+                          path('home/', views.home, name='blog-sneha'),
+                          path('about/', views.about, name='blog-about')
+                      ]
+in dj urls            from django.urls import include
+                      path('blog/',include(blog.urls))
+
+"""
